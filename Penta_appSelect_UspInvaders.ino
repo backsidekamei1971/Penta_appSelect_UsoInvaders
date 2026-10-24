@@ -166,12 +166,27 @@ void loop()
     Waveshield.fillRect(145, 350, 10, 10, MAGENTA);
     Waveshield.fillRect(135, 320, 10, 10, MAGENTA);
     Waveshield.fillRect(135, 340, 10, 10, MAGENTA);
-
-    Waveshield.fillRect(280, 220, 35, 100, MAGENTA);
-    Waveshield.fillRect(255, 253, 25, 33, MAGENTA);
-
-
+    k=0;
     }
+
+        if (app_select==4){
+    if (p.x <= 380 && p.y <= 450 && p.x > 70 && p.y >= 290){
+    k=k+8;
+    }
+    if (p.x <= 380 && p.y <= 270 && p.x > 70 && p.y >= 110){
+    k=k-8;
+    }
+    Waveshield.fillRect(280, 220+k, 35, 100, MAGENTA);
+    Waveshield.fillRect(255, 253+k, 25, 33, MAGENTA);
+    delay(100);
+    Waveshield.fillRect(280, 220+k, 35, 100, BLACK);
+    Waveshield.fillRect(255, 253+k, 25, 33, BLACK);
+
+
+        }
+
+
+    
 
     if (p.x <= 80 && p.y <= 240 && p.x > 0 && p.y >= 160 ) {   ////Cat`s EYE GREEN
     j=1;
